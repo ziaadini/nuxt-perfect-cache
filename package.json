@@ -1,0 +1,36 @@
+{
+  "name": "nuxt-perfect-cache",
+  "version": "1.0.0",
+  "description": "solution for server side page and api caching",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ziaadini/nuxt-perfect-cache.git"
+  },
+  "keywords": [
+    "nuxt",
+    "ssr",
+    "cache",
+    "redis",
+    "universal",
+    "cacheRedis",
+    "prefectCache"
+  ],
+  "author": "ziaadini",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ziaadini/nuxt-perfect-cache/issues"
+  },
+  "homepage": "https://github.com/ziaadini/nuxt-perfect-cache#readme",
+  "dependencies": {
+    "redis": "^3.0.2",
+    "tls": "^0.0.1",
+    "net": "^1.0.2"
+  }
+}

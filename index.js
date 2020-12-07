@@ -50,11 +50,12 @@ export default function index({
       )
     }
   })
-  this.addTemplate({
-    fileName: 'nuxt-perfect-cache/RedisStore.js',
-    src: path.resolve(__dirname, 'lib/RedisStore.js'),
-  })
+  // this.addTemplate({
+  //   fileName: 'nuxt-perfect-cache/RedisStore.js',
+  //   src: path.resolve(__dirname, 'lib/RedisStore.js'),
+  // })
   this.addPlugin({
+    fileName: 'nuxt-perfect-cache/plugin.js',
     src: path.resolve(__dirname, 'plugin.js'),
     options: {
       url,
@@ -64,4 +65,4 @@ export default function index({
     },
   })
 }
-// module.exports.meta = require('./package.json')
+module.exports.meta = require('./package.json')
