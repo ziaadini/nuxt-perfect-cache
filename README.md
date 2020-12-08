@@ -46,7 +46,9 @@ modules: [
 ## caveat
 **important security warning** : don't load secret keys such as user credential on the server for cached pages.
  _this is because they will cache for all users!_
-
+###side note
+if during test process in your local machine your page start rerender over and over it is not a big deal that is because package changed nuxt render function
+to solve that open a route not include cache in your browser until build process done
 ## api request caching
 ```javascript
 asyncData(ctx) {
