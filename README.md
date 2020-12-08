@@ -1,12 +1,9 @@
-# nuxt-perfect-cache
-solution for the server side page and api caching
-
 ## usage 
 
 ```
 npm i nuxt-perfect-cache
 ```
-first off all config redis to your machine
+first of all config redis to your machine
 if you are using ubuntu there is a good video here is the link:
 https://www.youtube.com/watch?v=gNPgaBugCWk
 ```javascript
@@ -46,7 +43,8 @@ modules: [
 ## caveat
 **important security warning** : don't load secret keys such as user credential on the server for cached pages.
  _this is because they will cache for all users!_
-###side note
+ 
+### side note
 if during test process in your local machine your page start rerender over and over it is not a big deal that is because package changed nuxt render function
 to solve that open a route not include cache in your browser until build process done
 ## api request caching
@@ -68,3 +66,9 @@ this method useful for consistent requests such as menu
 
 ## caveat
 then callback function should return a valid json for `JSON.stringify` method
+
+## features
+- easy to use
+- cache whole page in the redis
+- separate expire time for each page
+- api request cache
