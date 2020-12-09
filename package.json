@@ -1,7 +1,7 @@
 {
   "name": "nuxt-perfect-cache",
-  "version": "1.0.4",
-  "description": "solution for the server side page and api caching",
+  "version": "1.0.6",
+  "description": "nuxt page cache and nuxt api cache using redis",
   "main": "index.js",
   "directories": {
     "lib": "lib"
