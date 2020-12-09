@@ -15,6 +15,7 @@ modules: [
         {
           disable: false,
           appendHost: true,
+          ignoreConnectionErrors:false, //it's better to be true in production
           prefix: 'r-',
           url: 'redis://127.0.0.1:6379',
           getCacheData(route, context) {          
@@ -35,6 +36,7 @@ modules: [
 |:---|:---|:---|:---|
 | disable | boolean | no | default is `true` you can disable all module features
 | appendHost | boolean | no | default is `true` append host to the key
+| ignoreConnectionErrors | boolean | no | default is `false` ignore connection errors and render data as normal
 | prefix | string | no | default is `r-` it's redis prefix key
 | url | string | no | default is `redis://127.0.0.1:6379` url for redis connection
 | getCacheData | function | yes | should return an object include key and expire if return false page will not cache
