@@ -11,6 +11,7 @@ export default ({ req }, inject) => {
         disable = options.disable,
         url = options.url,
         prefix = options.prefix,
+        ignoreConnectionErrors=options.ignoreConnectionErrors
       },
       requestCallback
     ) => {
@@ -19,7 +20,7 @@ export default ({ req }, inject) => {
       }
       const host = req && req.headers ? req.headers.host : ''
       key = options.appendHost ? key + '-' + host : key
-      const redis = new RedisStore(url, true, prefix,process && process.server)
+      const redis = new RedisStore(url, true, prefix,process && process.server,ignoreConnectionErrors)
       return redis.fetch(key, expire, requestCallback, true)
     }
   )

@@ -2,12 +2,13 @@ import path from 'path'
 import RedisStore from './lib/RedisStore'
 import { serialize, deserialize } from './lib/serializer'
 export default function index({
-  getCacheData,
-  url = 'redis://127.0.0.1:6379',
-  prefix = 'r-',
-  appendHost = true,
-  disable = false,
-}) {
+                                getCacheData,
+                                url = 'redis://127.0.0.1:6379',
+                                prefix = 'r-',
+                                appendHost = true,
+                                disable = false,
+                                ignoreConnectionErrors = false,
+                              }) {
   const { nuxt } = this
 
   nuxt.hook('render:before', (renderer) => {
@@ -19,35 +20,59 @@ export default function index({
       // eslint-disable-next-line prefer-const
       let { key, expire } = cacheData
       key = appendHost ? key + '-' + host : key
-      const redisStore = new RedisStore(
-        cacheData.url || url,
-        false,
-        prefix,
-        true
-      )
-      function renderAndSetCacheKey() {
-        return renderRoute(route, context).then(async function (result) {
-          if (!result.error && !result.redirected) {
-            await redisStore.write(key, serialize(result), expire)
-          }
-          return result
-        })
-      }
-      return (
-        redisStore
-          .read(key)
-          .then(function (cachedResult) {
-            if (cachedResult) {
-              return deserialize(cachedResult)
-            }
+        const redisStore = new RedisStore(
+            cacheData.url || url,
+            false,
+            prefix,
+            true,
+            ignoreConnectionErrors
+        )
 
-            return renderAndSetCacheKey()
+        function renderAndSetCacheKey() {
+          return renderRoute(route, context).then(async function (result) {
+            if (!result.error && !result.redirected) {
+              await redisStore.write(key, serialize(result), expire)
+            }
+            return result
           })
-          // .catch(renderRoute(route, context))
-          .finally(() => {
-            redisStore.disconnect()
-          })
-      )
+        }
+
+      return new Promise(async (resolve)=>{
+        try{
+          const cachedResult=await redisStore.read(key)
+          if (cachedResult) {
+             resolve(deserialize(cachedResult))
+           }else{
+             resolve(renderAndSetCacheKey())
+           }
+        }catch{
+          resolve(renderRoute(route, context))
+        }
+      }).finally(()=>{
+          redisStore.disconnect()
+      })
+
+      // try {
+      //   function renderAndSetCacheKey() {
+      //     return renderRoute(route, context).then(async function (result) {
+      //       if (!result.error && !result.redirected) {
+      //         await redisStore.write(key, serialize(result), expire)
+      //       }
+      //       return result
+      //     })
+      //   }
+      //   return redisStore.read(key).then(function (cachedResult) {
+      //     if (cachedResult) {
+      //       return deserialize(cachedResult)
+      //     }
+      //
+      //     return renderAndSetCacheKey()
+      //   })
+      // } catch {
+      //   return renderRoute(route, context)
+      // } finally {
+      //   redisStore.disconnect()
+      // }
     }
   })
   // this.addTemplate({
@@ -62,6 +87,7 @@ export default function index({
       prefix,
       appendHost,
       disable,
+      ignoreConnectionErrors,
     },
   })
 }
