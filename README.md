@@ -75,3 +75,12 @@ then callback function should return a valid json for `JSON.stringify` method
 - cache whole page in the redis
 - separate expire time for each page
 - api request cache
+
+## more control
+to save a page to another redis server just return 
+`{key:string,expire:number,url:"my new url"}`
+inside `getCacheData` method
+
+also, it is possible for `catcheFetch` method here is full object you can pass
+`{ key,expire,disable,url,prefix,ignoreConnectionErrors}`
+

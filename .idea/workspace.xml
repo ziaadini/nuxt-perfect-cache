@@ -19,9 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="99dd4348-3129-4556-a58e-8985fa47ee84" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-    </list>
+    <list default="true" id="99dd4348-3129-4556-a58e-8985fa47ee84" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -64,6 +62,7 @@
       <workItem from="1607404752510" duration="3351000" />
       <workItem from="1607410124298" duration="1126000" />
       <workItem from="1607429619864" duration="1292000" />
+      <workItem from="1607494883644" duration="8359000" />
     </task>
     <servers />
   </component>
@@ -83,13 +82,13 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl" timestamp="1607429628493">
+    <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl" timestamp="1607503795460">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1607429628493" />
-    <state x="684" y="291" width="618" height="522" key="find.popup" timestamp="1607335507726">
+    <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1607503795460" />
+    <state x="684" y="291" width="618" height="522" key="find.popup" timestamp="1607495394469">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="684" y="291" width="618" height="522" key="find.popup/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1607335507726" />
+    <state x="684" y="291" width="618" height="522" key="find.popup/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1607495394469" />
   </component>
 </project>
