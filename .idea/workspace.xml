@@ -43,7 +43,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../webmobit" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -63,6 +63,7 @@
       <workItem from="1607410124298" duration="1126000" />
       <workItem from="1607429619864" duration="1292000" />
       <workItem from="1607494883644" duration="8359000" />
+      <workItem from="1607508465351" duration="1118000" />
     </task>
     <servers />
   </component>
