@@ -41,7 +41,8 @@ modules: [
 | url | string | no | default is `redis://127.0.0.1:6379` url for redis connection
 | getCacheData | function | yes | should return an object include key and expire if return false page will not cache
 
-
+#### note
+ ignoreConnectionErrors added in 1.0.4 version
 ## caveat
 **important security warning** : don't load secret keys such as user credential on the server for cached pages.
  _this is because they will cache for all users!_
