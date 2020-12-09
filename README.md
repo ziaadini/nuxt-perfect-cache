@@ -49,7 +49,7 @@ modules: [
  
 ### side note
 if during test process in your local machine your page start rerender over and over it is not a big deal that is because package changed nuxt render function
-to solve that open a route not include cache in your browser until build process done
+to solve that open a route not include cache in your browser **until build process done**
 ## api request caching
 ```javascript
 asyncData(ctx) {
