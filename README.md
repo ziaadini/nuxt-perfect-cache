@@ -84,3 +84,12 @@ inside `getCacheData` method
 also, it is possible for `catcheFetch` method here is full object you can pass
 `{ key,expire,disable,url,prefix,ignoreConnectionErrors}`
 
+for write and read directly you can use two injected methods:
+
+`const data = await $cacheRead({ key:'youtKey' })`
+
+data is null if key is not exist
+
+`const flag = await $cacheWrite({ key, expire: 60*60*24 }, 'yout content')`
+
+flag is false if can not write
