@@ -20,10 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="99dd4348-3129-4556-a58e-8985fa47ee84" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugin.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +46,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../webmobit" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -76,7 +73,8 @@
       <workItem from="1607494883644" duration="8359000" />
       <workItem from="1607508465351" duration="1118000" />
       <workItem from="1607511397256" duration="2283000" />
-      <workItem from="1608969827195" duration="4368000" />
+      <workItem from="1608969827195" duration="5215000" />
+      <workItem from="1609044657233" duration="41000" />
     </task>
     <servers />
   </component>
@@ -94,15 +92,5 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl" timestamp="1607503795460">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1607503795460" />
-    <state x="684" y="291" width="618" height="522" key="find.popup" timestamp="1607495394469">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state x="684" y="291" width="618" height="522" key="find.popup/67.27.1853.1053/1920.41.1920.1080@67.27.1853.1053" timestamp="1607495394469" />
   </component>
 </project>
