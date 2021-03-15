@@ -93,3 +93,5 @@ data is null if key is not exist
 `const flag = await $cacheWrite({ key, expire: 60*60*24 }, 'yout content')`
 
 flag is false if can not write
+
+_note that you have to make sure process is in the server for `cacheRead` and `cacheWrite` methods_
