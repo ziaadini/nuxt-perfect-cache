@@ -96,5 +96,5 @@ flag is false if can not write
 
 _note that you have to make sure process is in the server for `cacheRead` and `cacheWrite` methods_
 
-##security warning
+## security warning
  just note that you should use private redis server, if you are using a public redis server with a password be aware your password will bundle in client and leaks
