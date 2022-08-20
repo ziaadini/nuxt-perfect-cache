@@ -13,9 +13,9 @@ export default function index({
 
   nuxt.hook('render:before', (renderer) => {
     const renderRoute = renderer.renderRoute.bind(renderer)
-    renderer.renderRoute = function (route, context) {
+    renderer.renderRoute = async function (route, context) {
       const host = context.req.headers.host
-      const cacheData = getCacheData ? getCacheData(route, context) : null
+      const cacheData = getCacheData ? await getCacheData(route, context) : null
       if (!cacheData || disable) return renderRoute(route, context)
       // eslint-disable-next-line prefer-const
       let { key, expire } = cacheData
