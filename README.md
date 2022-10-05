@@ -13,7 +13,7 @@ modules: [
     [
         'nuxt-perfect-cache',
         {
-          disable: false,
+          disable: false, // or in runtime config from .env file
           appendHost: true,
           ignoreConnectionErrors:false, //it's better to be true in production
           prefix: 'r-',
@@ -27,6 +27,12 @@ modules: [
         }
       ]
 ]
+
+publicRuntimeConfig: {
+    nuxtPerfectCache: {
+        disable: process.env.NUXT_PERFECT_CACHE_DISABLED
+    }
+}
 
 ```
 
