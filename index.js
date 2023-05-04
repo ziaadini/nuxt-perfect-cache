@@ -11,6 +11,8 @@ export default function index({
                               }) {
   const { nuxt } = this
 
+  disable = (nuxt.options.runtimeConfig && nuxt.options.runtimeConfig.nuxtPerfectCache && nuxt.options.runtimeConfig.nuxtPerfectCache.disable) || disable
+
   nuxt.hook('render:before', (renderer) => {
     const renderRoute = renderer.renderRoute.bind(renderer)
     renderer.renderRoute = async function (route, context) {
